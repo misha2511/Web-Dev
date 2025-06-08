@@ -1,0 +1,1327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* ,*::after , *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Poppins", serif;
+    font-size: 10px;
+}
+
+/* ######################## utility - class ############################## */
+
+.container{
+    max-width:1200px ;
+    width:90%;
+    /* border: 2px solid red; */
+    height: 8vh;
+   margin:auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #16a083;
+}
+
+/* ########################### navbar-styling ######################## */
+ 
+/* ################### desktop-mode ############# */
+
+
+.nav-bar input[type="checkbox"] ,
+.nav-bar hamburger-lines{
+    display: none;
+}
+
+.nav-bar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 10;
+}
+
+/* .nav-bar .nav-container{
+    width: 1200px;
+    /* border: 2px solid red; */
+    /* height: 10vh; */
+   /* margin:auto; */
+/* } */ 
+
+.nav-bar .logo{
+    float: left;
+    font-size: 27px;
+    font-weight: 500;
+    margin: 10px;
+}
+.nav-bar .menu-items{
+    float: right;
+    display: flex;
+    /* border: 2px solid black; */
+    margin: 10px;
+}
+.menu-items .item{
+    list-style-type: none;
+    margin: 10px;
+}
+.menu-items .item a{
+    text-decoration: none;
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+    transition: color 0.1s ease-in-out;
+}
+.item a:hover{
+    color: #117964;
+    border-bottom: 2px solid #117964;
+    border-radius: 2px;
+}
+
+/* ######################### showcase ############################## */
+
+.showcase{
+    /* border: 2px solid red; */
+    height: 60vh;
+    position: relative;
+    background:linear-gradient(rgba(240,240,240,0.144), rgba(255,255,255,0.336)),url(img/header-image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.showcase-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+    height: 100%;
+}
+/* .showcase-info a{
+    text-decoration:none;
+    border: 2px solid #117964;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #117964;
+    margin: 10px;
+} */
+
+/* ######################### about ########################### */
+.about{
+    /* padding: 50px 0; */
+    /* border: 2px solid rgba(51, 4, 4, 0);
+    height: 100%; */
+    background: #f5f5f5;
+}
+
+.about-container{
+    /* display: flex; */
+    margin-top: 80px;
+    margin-bottom: 100px;
+    /* border: 2px solid red; */
+    height: 40vh;
+    font-size: 13px;
+    width: 1000px;
+    /* box-shadow: 0px 5px 10px 0px #aaa; */
+}
+.about-container .left{
+    /* border: 2px solid blue; */
+    padding: 20px;
+    float: left;
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    transform: translateX(-150%);
+    animation: left-animation 1s ease-in-out forwards;
+}
+
+@keyframes left-animation{
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.about-container h3 ,.about-container p{
+    color: #555;
+}
+.about-container .right{
+    /* border: 2px solid rgb(255, 0, 170); */
+    float: right;
+    height: 100%;
+    width: 50%;
+    transform: translateX(150%);
+    animation: right-animation 1s ease-in-out forwards;
+}
+
+@keyframes right-animation{
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.about-container .right img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ####################### types of food ############################### */
+
+#food{
+    /* border: 2px solid rgb(102, 255, 0); */
+    padding: 20px;
+    height: 60vh;
+
+}
+#food h2{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+.food-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    max-height: 300px;
+    /* border: 2px solid red; */
+    
+
+
+}
+
+.food-type{
+    /* border: 2px solid rgb(9, 8, 8); */
+    height: 300px;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+}
+
+.img-content{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     /* border: 2px solid blue; */
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     padding-top:100px ;
+     background-color: rgba(0, 0, 0, 0.871);
+     z-index: 1;
+     transform-origin:0,0;
+     transform: scaleY(-100%,-100%);
+     transition: transform 0.5 ease-in-out 0.1s;
+     opacity: 0;
+}
+
+.img-content h3{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.img-content a{
+    font-weight: 500;
+}
+
+.img-content:hover{
+    transform: scaleY(100% ,100%);
+    opacity: 1;
+}
+
+/* ############################# food menu #################### */
+
+.food-menu-h2{
+    font-size: 24px;
+    font-weight: 400;
+    color: #353535;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    text-transform: uppercase;
+}
+
+.food-menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+    height: 90vh;
+    margin: auto;
+}
+
+.food-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.food-menu-container img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: 5px;
+}
+
+.food-menu-desc{
+    /* border: 2px solid red; */
+    /* text-align: center; */
+    height: 100px;
+    width: 300px;
+    margin:auto;
+}
+
+.food-menu-desc h2{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.food-menu-desc p{
+    /* font-size: 10px; */
+    /* letter-spacing: 1px; */
+    font-weight: 500;
+}
+
+.food-price{
+    color: #117964;
+    font-weight: 700;
+}
+
+/* #################### consumer review ######################### */
+
+
+#testimonial{
+    /* border: 2px solid blue; */
+    height: 50vh;
+    background: #f5f5f5;
+    margin-top: 20px;
+}
+
+.testimonial-container{
+    display: flex;
+}
+.testimonial-box img{
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testimonial-title{
+    /* border: 2px solid red; */
+    text-align: center;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    /* border: 2px solid red; */
+    padding-top: 30px;
+}
+
+.testimonial-box p{
+    color: #555;
+}
+
+.testimonial-box{
+    /* border: 2px solid green; */
+    text-align: center;
+    margin: 40px auto;
+    height: 80px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.testimonial-box img{
+    /* border: 2px solid black; */
+    margin-top: 20px;
+}
+.star-rating{
+    color:#ff9529;
+}
+
+/* ############### contact-us ############### */
+
+#Contact{
+    padding: 20px auto;
+    /* border: 2px solid red; */
+    height: 70vh;
+    background: rgba(226,226,226);
+}
+
+.contact-form h2{
+    /* border: 2px solid red; */
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.contact-container{
+    display: flex;
+}
+
+.contact-img{
+    width: 50%;
+}
+
+.contact-img img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+.contact-form{
+    /* border: 2px solid #054538; */
+    /* border-radius: 20px; */
+    height: 60vh;
+    width: 1200px;
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #f6f4f4;
+}
+.contact-form input[type="text"] {
+    width: 90%;
+    margin: 10px -20px 0px 20px;
+    height: 30px;
+}
+
+.contact-form input[type="button"]{
+    margin-left:30px ;
+}
+
+.contact-form textarea{
+    width: 90%;
+    margin: 10px;
+    margin: 10px -20px 0px 20px;
+
+}
+
+/* ########################## bottom ####################### */
+
+.bottom{
+    border: 2px solid rgba(0, 0, 0, 0.09);
+    height: 100px;
+    text-align: center;
+    background-color: #101010;
+}
+
+.bottom p{
+    color: #fff;
+    font-size: 13px;
+    margin-top: 45px;
+}
+
+/* ######################### media queris  ########################### */
+
+@media (max-width:500px){
+    *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       overflow-x: hidden;
+    }
+
+     .nav-bar{
+        opacity: 0.85;
+        /* border: 2px solid red; */
+        width:100%;
+        /* height: 100%; */
+        overflow: visible;
+     }
+     .nav-container input[type="checkbox"] ,
+    .nav-container .hamburger-lines{
+        display: block;
+        height: 64px;
+        width: 100%;
+        /* border: 2px solid blue; */
+         position: relative;
+         overflow-x: visible;
+    }
+    .nav-container input[type="checkbox"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        z-index: 10;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+
+    }
+
+    .nav-container .hamburger-lines{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+        z-index: 3;
+        margin: 10px 0 0 20px;
+    }
+     
+    .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        background-color: #333333;
+        border-radius: 10px;
+        /* margin: 20px; */
+    }
+    
+    .nav-container .menu-items{
+        /* border: 2px solid blue; */
+        height: 100vh;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-top: 60px;
+        margin-left: -10px;
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px #aaa;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        /* z-index: 5; */
+        overflow: visible;
+        /* opacity: 3; */
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menu-items{
+          display: block;
+          transform: translate(0%);
+         overflow: visible;
+         opacity: 9;
+         z-index: 999;
+
+    }
+
+
+     .nav-container .hamburger-lines .line1{
+            transform-origin: -15% -15% ;
+            transition: transform 0.4s ease-in-out;
+     }
+     .nav-container .hamburger-lines .line3{
+            transform-origin:-15% 100%;
+            transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    
+
+    .nav-container .menu-items .item{
+        margin: 50px;
+        /* border: 2px solid blue; */
+        width: 100%;
+    }
+
+    .nav-container .menu-items .item a{
+       
+        color: #333333;
+        z-index: 5;
+        /* border: 2px solid red; */
+        /* width: auto; */
+        margin-bottom: 50px;   
+     }
+     .nav-container .menu-items .item a:hover{
+        color: #117964;
+        border-bottom: 2px solid #117964;
+        border-radius: 5px;
+     }
+
+     .nav-container .logo{
+        position: absolute;
+        top: 0%;
+        right: 20px;
+     }
+
+     .showcase{
+        /* border: 2px solid red; */
+        /* height: 60vh; */
+        /* position: relative; */
+        width: 100%;
+        background:linear-gradient(rgba(240,240,240,0.144), rgba(255,255,255,0.336)),url(img/header-image2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* border: 2px solid red; */
+        opacity: 2;
+    }
+
+     /* ##################### about ##################### */
+ 
+    .about{
+        /* border: 2px solid black; */
+        height: 700px;
+        opacity: 2;
+        /* margin-top: -50px; */
+        /* overflow-wrap: anywhere; */
+    }
+
+    .about-container{
+
+        /* border: 2px solid red; */
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .about-container .left{
+        float: none;
+        transform: none;
+        /* border: 2px solid red; */
+        width: 35%;
+        height: auto;
+        margin-left: 20px;
+        /* margin-top: -100px; */
+    }
+    .about-container .right{
+        float: none;
+        transform: none;
+        /* border: 2px solid green; */
+        width: 35%;
+        height: auto;
+        margin-left: 20px;
+        z-index: 999;
+    }
+    .about-container .right img{
+        object-fit: cover;
+        object-position: right;
+    }
+
+
+    /* ################################## food menu ############################ */
+
+     #food{
+        /* border: 2px solid red; */
+        height: 1000px;
+     }
+
+     .food .food-container{
+        /* border: 2px solid black; */
+        height:900px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -50px;
+     }
+
+    .food-type{
+        width: 90%;
+        height: 250px;
+        /* border: 2px solid red; */
+        margin: auto;
+        
+    }
+    .food-type img{
+        width: 100%;
+        height: 250px;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+
+
+    /* ####################### food menu ######################## */
+    
+    #food-items{
+        /* border: 2px solid black; */
+        height: 2100px;
+        width: 100%;
+        /* margin-top: 500px; */
+    }
+
+    .food-menu-container{
+        /* border: 2px solid red; */
+        height: 2000px;
+    }
+
+    .food-menu-item{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+        align-items: center;
+    }
+    .food-menu-desc{
+        text-align: center;
+    }
+
+    /* ############################# consumer review ######################### */
+
+    #testimonial{
+        /* border: 2px solid green; */
+        height: 100%;
+        /* margin-top: 120px; */
+    }
+    .testimonial-container{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 100px; */
+    }
+
+    #testimonial h2{
+        /* border: 2px solid blue; */
+        height: 100px;
+       /* color: red; */
+       /* padding-top: -20px; */
+       /* margin-top: 100px; */
+    }
+
+    .testimonial-box{
+        /* border: 2px solid black; */
+        height: 100%;
+        margin:auto;
+    }
+
+    /* ######################### contact ################# */
+
+    #Contact{
+        height: auto;
+        /* border: 2px solid red; */
+        padding: 20px;
+    }
+     .contact-container{
+        /* border: 2px solid black; */
+        height: inherit;
+        /* margin-top: 100px; */
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    .contact-img img{
+         border: 2px solid green;
+        height: 300px;
+        width: 300px;
+        margin-right: 100px;
+        /* align-items: center; */
+        object-fit: cover;
+        object-position: center;
+        float: none;
+        /* display: flex; */
+        display: none;
+    }
+    
+    .contact-form {
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 390px;
+        margin: auto;
+        /* padding-top: -100px; */
+    }
+
+    /* #######################footer###################### */
+    .bottom{
+        margin-top: auto;
+    }
+
+}
+
+
+@media (min-width:501px) and (max-width:860px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+     }
+ 
+   
+
+    .nav-bar{
+        opacity: 0.85;
+        /* border: 2px solid red; */
+        width:100%;
+        overflow: visible;
+        margin: auto;
+     }
+     .nav-container input[type="checkbox"] ,
+    .nav-container .hamburger-lines{
+        display: block;
+        height: 64px;
+        width: 100%;
+        /* border: 2px solid blue; */
+         position: relative;
+    }
+    .nav-container input[type="checkbox"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        z-index: 10;
+        opacity: 0;
+        margin: 10px 0 0 20px;
+
+    }
+
+    .nav-container .hamburger-lines{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+        z-index: 3;
+        margin: 10px 0 0 20px;
+        /* padding-left: 10px; */
+    }
+     
+    .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        background-color: #333333;
+        border-radius: 10px;
+        /* margin: 20px; */
+    }
+    
+    .nav-container .menu-items{
+        /* border: 2px solid blue; */
+        height: 100vh;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-top: 60px;
+        margin-left: -10px;
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px #aaa;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+        overflow: visible;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menu-items{
+          display: block;
+          transform: translate(0%);
+    }
+
+
+     .nav-container .hamburger-lines .line1{
+            transform-origin: -15% -15% ;
+            transition: transform 0.4s ease-in-out;
+            /* margin-left: 5px; */
+     }
+     .nav-container .hamburger-lines .line3{
+            transform-origin:-15% 100%;
+            transition: transform 0.4s ease-in-out;
+            /* margin-left: 5px; */
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    
+
+    .nav-container .menu-items .item{
+        margin: 20px auto 50px 10px;
+        /* border: 2px solid blue; */
+    }
+
+    .nav-container .menu-items .item a{
+       
+        color: #333333;
+        z-index: 5;
+        /* border: 2px solid red; */
+        /* width: auto; */
+        margin-bottom: 50px;   
+     }
+     .nav-container .menu-items .item a:hover{
+        color: #117964;
+        border-bottom: 2px solid #117964;
+        border-radius: 5px;
+     }
+
+     .nav-container .logo{
+        position: absolute;
+        top: 0%;
+        left: 90%;
+     }
+
+
+
+     /* ##################### about ##################### */
+ 
+    .about{
+        /* border: 2px solid black; */
+        height: auto;
+        /* margin-top: -50px; */
+    }
+
+    .about-container{
+        /* border: 2px solid red; */
+        height: auto;
+        margin: auto;
+    }
+
+    .about-container .left{
+        float: none;
+        transform: none;
+        /* border: 2px solid red; */
+        width: 70%;
+        height: 250px;
+        margin-left: 10px;
+    }
+    .about-container .right{
+        float: none;
+        transform: none;
+        /* border: 2px solid green; */
+        width: 70%;
+        height: 480px;
+        margin: 10px 20px 20px 10px;
+    }
+    .about-container .right img{
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        object-position: center;
+        margin: 10px 20px 20px 10px;
+
+    }
+
+
+    /* ################################## food menu ############################ */
+    #food{
+        /* border: 2px solid red; */
+        height: 1000px;
+    }
+     .food .food-container{
+        /* border: 2px solid black; */
+        height: 900px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -50px;
+     }
+
+    .food-type{
+        width: 90%;
+        height: 250px;
+        /* border: 2px solid red; */
+        margin: auto;
+        
+    }
+    .food-type img{
+        width: 100%;
+        height: 250px;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+
+
+    /* ####################### food menu ######################## */
+
+    #food-items{
+        /* border: 2px solid black; */
+        height: 2100px;
+        width: 100%;
+        /* margin-top: 500px; */
+    }
+    .food-menu-container{
+        /* border: 2px solid red; */
+        height: 2000px;
+    }
+    .food-menu-item{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+        align-items: center;
+    }
+    .food-menu-desc{
+        text-align: center;
+    }
+
+    /* ############################# consumer review ######################### */
+
+    #testimonial{
+        /* border: 2px solid green; */
+        height: 100%;
+        /* margin-top: 120px; */
+    }
+    .testimonial-container{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        /* margin-top: 100px; */
+    }
+
+    #testimonial h2{
+        /* border: 2px solid blue; */
+        height: 80px;
+       /* color: red; */
+       /* padding-top: -20px; */
+       margin-top: -20px;
+    }
+
+    .testimonial-box{
+        /* border: 2px solid black; */
+        height: 90%;
+        width: 230px;
+        margin:auto;
+    }
+
+    /* ######################### contact ################# */
+
+    #Contact{
+        height: auto;
+    }
+     .contact-container{
+        /* border: 2px solid black; */
+        height: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    .contact-img img{
+        width: 300px;
+        height: 300px;
+        align-items: center;
+        margin: auto;
+        display: none;
+    }
+    
+    .contact-form {
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 350px;
+        margin: auto;
+        padding-top: -100px;
+    }
+
+    /* #######################footer###################### */
+    .bottom{
+        margin-top:0;
+    }
+
+}
+
+@media (min-width:861px) and (max-width:1024px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+     }
+ 
+    
+
+    .nav-bar{
+        opacity: 0.85;
+        /* border: 2px solid red; */
+        width: 100%;
+        overflow: visible;
+     }
+     .nav-container input[type="checkbox"] ,
+    .nav-container .hamburger-lines{
+        display: block;
+        height: 64px;
+        width: 100%;
+        /* border: 2px solid blue; */
+         position: relative;
+    }
+    .nav-container input[type="checkbox"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        z-index: 10;
+        opacity: 0;
+        margin: 10px 0 0 10px;
+
+    }
+
+    .nav-container .hamburger-lines{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+        z-index: 3;
+        margin: 10px 0 0 10px;
+    }
+     
+    .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        background-color: #333333;
+        border-radius: 10px;
+        /* margin: 20px; */
+    }
+    
+    .nav-container .menu-items{
+        /* border: 2px solid blue; */
+        height: 100vh;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-top: 60px;
+        margin-left: -10px;
+        background-color: #fff;
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0px 5px 10px 0px #aaa;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menu-items{
+          display: block;
+          transform: translate(0%);
+    }
+
+
+     .nav-container .hamburger-lines .line1{
+            transform-origin: -15% -15% ;
+            transition: transform 0.4s ease-in-out;
+     }
+     .nav-container .hamburger-lines .line3{
+            transform-origin:-15% 100%;
+            transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    
+
+    .nav-container .menu-items .item{
+        margin: 50px;
+    }
+
+    .nav-container .menu-items .item a{
+       
+        color: #333333;
+        z-index: 5;
+        /* border: 2px solid red; */
+        /* width: auto; */
+        margin-bottom: 50px;   
+     }
+     .nav-container .menu-items .item a:hover{
+        color: #117964;
+        border-bottom: 2px solid #117964;
+        border-radius: 5px;
+     }
+
+     .nav-container .logo{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+     }
+
+     /* ##################### about ##################### */
+ 
+    .about{
+        /* border: 2px solid black; */
+        height: 700px;
+        margin-top: -50px;
+    }
+
+    .about-container .left{
+        float: none;
+        transform: none;
+        /* border: 2px solid red; */
+        width: 260px;
+        height: 300px;
+        margin-left: 50px;
+    }
+    .about-container .right{
+        float: none;
+        transform: none;
+        /* border: 2px solid green; */
+        width: 250px;
+        height: 300px;
+        margin-left: 50px;
+    }
+    .about-container .right img{
+        object-fit: cover;
+        object-position: right;
+    }
+
+
+    /* ################################## food menu ############################ */
+
+     .food .food-container{
+        /* border: 2px solid black; */
+        height: 900px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -50px;
+     }
+
+    .food-type{
+        width: 90%;
+        height: 250px;
+        /* border: 2px solid red; */
+        margin: auto;
+        
+    }
+    .food-type img{
+        width: 100%;
+        height: 250px;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+
+
+    /* ####################### food menu ######################## */
+
+    #food-items{
+        /* border: 2px solid black; */
+        height: 1900px;
+        width: 100%;
+        margin-top: 500px;
+    }
+    .food-menu-item{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+        align-items: center;
+    }
+    .food-menu-desc{
+        text-align: center;
+    }
+
+    /* ############################# consumer review ######################### */
+
+    #testimonial{
+        /* border: 2px solid green; */
+        height: 100%;
+        margin-top: 120px;
+    }
+    .testimonial-container{
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 100px; */
+    }
+
+    #testimonial h2{
+        /* border: 2px solid blue; */
+        height: 100px;
+       /* color: red; */
+       /* padding-top: -20px; */
+       /* margin-top: 100px; */
+    }
+
+    .testimonial-box{
+        /* border: 2px solid black; */
+        height: 100%;
+        margin:20px;
+    }
+
+    /* ######################### contact ################# */
+
+    #Contact{
+        height: 750px;
+    }
+     .contact-container{
+        /* border: 2px solid black; */
+        height: 700px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+
+    .contact-img img{
+        width: 300px;
+        height: 300px;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .contact-form {
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 350px;
+        margin: auto;
+        padding-top: -100px;
+    }
+
+    /* #######################footer###################### */
+    .bottom{
+        margin-top: auto;
+    }
+}
+
+
+
